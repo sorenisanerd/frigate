@@ -209,7 +209,7 @@ class AudioEventMaintainer(threading.Thread):
             audio_detections = []
 
             for label, score, _ in model_detections:
-                logger.debug(f"Heard {label} with a score of {score}")
+                self.logger.debug(f"Heard {label} with a score of {score}")
 
                 if label not in self.config.audio.listen:
                     continue
